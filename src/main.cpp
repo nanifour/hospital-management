@@ -99,12 +99,12 @@ cout << "5. Back to Main Menu. " << endl << endl;
          }
          else if(options == '3')
          {
-           cout << endl << "Option coming soon . . ." << endl;
+             app.modifyAppt();
            break;
          }
          else if(options == '4')
          {
-           app.modifyAppt();
+             cout << endl << "Option coming soon . . ." << endl;
            break;
          }
          else if(options == '5')
@@ -139,7 +139,7 @@ cout << "9. Back to Main Menu. " << endl << endl;
          }
          else if(options == '2')
          {
-           cout << endl <<  "Option coming soon . . ." << endl;
+             sl.showUnavailable();
            break;
          }
          else if(options == '3')
@@ -149,7 +149,7 @@ cout << "9. Back to Main Menu. " << endl << endl;
          }
          else if(options == '4')
          {
-           sl.slotsforTime();
+             cout << endl << "Option coming soon . . ." << endl;
            break;
          }
          else if(options == '5')
