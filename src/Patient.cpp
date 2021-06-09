@@ -122,13 +122,13 @@ void Patient::findPatByDoc()
     bool idFoundinDoc = false;
     bool idFoundinPat = false;
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 10; i++)
     {
     if (docName == doc.GetDoc_fullName(i))
         nameFound = true;
     }
 
-    for (int i = 0; i <3; i++)
+    for (int i = 0; i <10; i++)
     {
         if (Getdoctor_id(i) == doc.GetDoc_id(i))
         idFoundinDoc = true;
@@ -178,7 +178,7 @@ void Patient::updatePatInfo()
    string blood = "";
 
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 20; i++)
     {
         if (item == GetPat_name(i))
         {
@@ -264,7 +264,7 @@ void Patient::AddPatient()
            cin >> blood;
            SetPat_bloodType(blood,12);
 
-        for (int i = 0; i < 11; i++){
+        for (int i = 0; i < 20; i++){
   cout << endl << "ID: " << GetPat_idNum(i) << endl;
   cout << "Doctor ID: " << Getdoctor_id(i) << endl;
   cout << "Record ID: " << Getrecord_id(i) << endl;
