@@ -7,10 +7,10 @@
 class Slot
 {
     //private data
-        int slot_id[40];
-        int date_id[40];
-        int doctor_id[40];
-        std::string available[40];
+        int slot_id[400];
+        int date_id[400];
+        int doctor_id[400];
+        std::string available[400];
 
     public:
         Slot();                    //default constructor
@@ -19,6 +19,7 @@ class Slot
         void loadSlots(std::ifstream &InputFile);
         void printSlots();
         void showAvailable();
+        void showUnavailable();
         void addSlot();
         void slotsforDoctor();
         void modifySlot();

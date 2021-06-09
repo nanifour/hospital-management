@@ -40,7 +40,7 @@ void Slot::loadSlots(ifstream &InputFile)
 
    InputFile >> numOfSlots;
 
-    for (int i = 0; i < numOfSlots; i++){
+    for (int i = 0; i < 200 ; i++){
          InputFile >> slotId;
           Setslot_id(slotId,i);
 
@@ -58,7 +58,7 @@ void Slot::loadSlots(ifstream &InputFile)
 
 void Slot::printSlots()
 {
-    for (int i = 0; i < 30; i++){
+    for (int i = 0; i < 40; i++){
   cout << endl << "Slot ID: " << Getslot_id(i) << endl;
   cout << "Date ID: " << Getdate_id(i) << endl;
   cout << "Doctor ID: " << Getdoctor_id(i) << endl;
@@ -71,22 +71,39 @@ void Slot::showAvailable()
      bool found = false;
      string str ("available");
 
-  for (int i = 0; i < 30; i++)
+  for (int i = 0; i < 40; i++)
     {
       if (Getavailable(i) == str)
       {
          found = true;
+          cout << endl << "Slot ID: " << Getslot_id(i) << endl;
+          cout << "Date ID: " << Getdate_id(i) << endl;
+          cout << "Doctor ID: " << Getdoctor_id(i) << endl;
+          cout << "Available: " << Getavailable(i) << endl;
       }
 
-      if (found == true)
-      {
-        cout << endl << "Slot ID: " << Getslot_id(i) << endl;
-        cout << "Date ID: " << Getdate_id(i) << endl;
-        cout << "Doctor ID: " << Getdoctor_id(i) << endl;
-      }
      }
+}
+
+void Slot::showUnavailable(){
+    bool found = false;
+    string str ("unavailable");
+
+    for (int i = 0; i < 40; i++)
+    {
+        if (Getavailable(i) == str)
+        {
+            found = true;
+            cout << endl << "Slot ID: " << Getslot_id(i) << endl;
+            cout << "Date ID: " << Getdate_id(i) << endl;
+            cout << "Doctor ID: " << Getdoctor_id(i) << endl;
+            cout << "Unavailable: " << Getavailable(i) << endl;
+        }
+
+    }
 
 }
+
 
 void Slot::addSlot()
 {
@@ -100,7 +117,7 @@ void Slot::slotsforDoctor()
   cout << endl << "Enter Doctor Id to find slots: ";
   cin >> docIDfound;
 
-      for (int i = 0; i < 30; i++){
+      for (int i = 0; i < 40; i++){
       if (docIDfound == Getdoctor_id(i))
             {
                cout << endl << "Slot ID: " << Getslot_id(i) << endl;
