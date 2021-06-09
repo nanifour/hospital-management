@@ -69,8 +69,6 @@ void Appointment::addAppt()
            cin >> medicine;
            SetPrescribed_medication(medicine,i);
 
-           //if (i)
-            //i++;
 }
 
 void Appointment::printAppt()

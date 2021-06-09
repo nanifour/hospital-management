@@ -7,13 +7,13 @@
 class Appointment
 {
      //private data
-        int Appoint_id[2];
-        int Doctor_id[2];
-        int Patient_id[2];
-        int Slot_id[2];
-        std::string visit_reason[2];
-        int Diagnosis_id[2];
-        std::string Prescribed_medication[2];
+        int Appoint_id[200];
+        int Doctor_id[200];
+        int Patient_id[200];
+        int Slot_id[200];
+        std::string visit_reason[200];
+        int Diagnosis_id[200];
+        std::string Prescribed_medication[200];
 
     public:
         Appointment();                         //default constructor
@@ -22,6 +22,7 @@ class Appointment
         void addAppt();
         void printAppt();
         void modifyAppt();
+        void removeAppt();
 
      //Getters and Setters
         int GetAppoint_id(int index) { return Appoint_id[index]; }
