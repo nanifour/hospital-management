@@ -9,12 +9,12 @@
 class Doctor
 {
     //private data
-        int Doc_id[3];
-        std::string Doc_username[3];
-        std::string Doc_password[3];
-        std::string Doc_fullName[3];
-        std::string Doc_phoneNum[3];
-        std::string Doc_specialty[3];
+        int Doc_id[300];
+        std::string Doc_username[300];
+        std::string Doc_password[300];
+        std::string Doc_fullName[300];
+        std::string Doc_phoneNum[300];
+        std::string Doc_specialty[300];
 
 
     public:

@@ -13,7 +13,7 @@ Doctor::Doctor()  //default constructor
 {
     int index = 0;
 
-    Doc_id[index] = 0;
+    Doc_id[index]= 0;
     Doc_username[index] = "";
     Doc_password[index] = "";
     Doc_fullName[index] = "";
@@ -46,19 +46,19 @@ void Doctor::loadDoctor(ifstream &InputFile)
    string pn = "";
    string sp = "";
 
-for(int i=0; i<numOfDoctors; i++)
+for(int i=0; i<30; i++)
 {
 InputFile >> id;
-SetDoc_id(id,i);
+SetDoc_id(id, i);
 
 InputFile >> un;
-SetDoc_username(un,i);
+SetDoc_username(un, i);
 
 InputFile >> pw;
-SetDoc_password(pw,i);
+SetDoc_password(pw, i);
 
 InputFile >> fn;
-SetDoc_fullName(fn,i);
+SetDoc_fullName(fn, i);
 
 InputFile >> pn;
 SetDoc_phoneNum(pn,i);
@@ -70,7 +70,7 @@ SetDoc_specialty(sp,i);
 }
 void Doctor::printDoctor()
 {
-    for (int i = 0; i < 3; i++){
+    for (int i = 0; i < 5; i++){
   cout << endl << "ID: " << GetDoc_id(i) << endl;
   cout << "Username: " << GetDoc_username(i) << endl;
   cout << "Password: " << GetDoc_password(i) << endl;
@@ -86,7 +86,7 @@ void Doctor::removeDoc(std::ifstream &InputFile, int size)
     cout << endl << "Enter the id of the Doctor to delete: ";
     cin >> toBeMoved;
 
-int index =0;
+    int index =0;
    toBeMoved = index + 1;
    while (toBeMoved < size) {
    array[toBeMoved] = array[toBeMoved+1];
@@ -102,7 +102,7 @@ void Doctor::findDoc()
     cout << endl << "Enter the id of the Doctor to search: ";
     cin >> idName;
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 5; i++)
     {
         if (idName == GetDoc_id(i))
         {
@@ -129,33 +129,33 @@ void Doctor::updateInfo()
    string pn = "";
    string sp = "";
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 5; i++)
     {
         if (item == GetDoc_fullName(i))
         {
            cout << endl << "Update Doctor id: ";
            cin >> id;
-           SetDoc_id(id,i);
+           SetDoc_id(id, i);
 
            cout << "Update Doctor username: ";
            cin >> un;
-           SetDoc_username(un,i);
+           SetDoc_username(un, i);
 
            cout << "Update Doctor password: ";
            cin >> pw;
-           SetDoc_password(pw,i);
+           SetDoc_password(pw, i);
 
            cout << "Update Doctor Full Name (No space between): ";
            cin >> fn;
-           SetDoc_fullName(fn,i);
+           SetDoc_fullName(fn, i);
 
            cout << "Update Doctor Phone Number: ";
            cin >> pn;
-           SetDoc_phoneNum(pn,i);
+           SetDoc_phoneNum(pn, i);
 
            cout << "Update Doctor Specialty: ";
            cin >> sp;
-           SetDoc_specialty(sp,i);
+           SetDoc_specialty(sp, i);
         }
     }
 }
