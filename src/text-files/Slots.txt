@@ -28,7 +28,7 @@ available
 6
 006
 369754
-available
+unavailable
 
 7
 007
@@ -83,7 +83,7 @@ available
 17
 007
 784459
-available
+unavailable
 
 18
 008
@@ -123,12 +123,12 @@ available
 25
 005
 744651
-available
+unavailable
 
 26
 006
 744651
-available
+unavailable
 
 27
 007
@@ -138,7 +138,7 @@ available
 28
 008
 744651
-available
+unvailable
 
 29
 009
@@ -183,12 +183,12 @@ available
 37
 007
 99999
-available
+unavailable
 
 38
 008
 99999
-available
+unavailable
 
 39
 009
