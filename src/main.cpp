@@ -44,11 +44,13 @@ Lab la;
 
 //Open input files
 ifstream PatFile;
+ofstream PatAddFile;
 ifstream DocFile;
 ifstream SlotFile;
 ifstream DateTimeFile;
 ifstream DiagFile;
 PatFile.open("./text-files/Patients.txt", ios::in);
+PatAddFile.open("./text-files/Patients.txt", ios::app);  //append to end of file
 DocFile.open("./text-files/Doctors.txt", ios::in);
 SlotFile.open("./text-files/Slots.txt", ios::in);
 DateTimeFile.open("./text-files/Date_Time.txt", ios::in);
@@ -243,8 +245,8 @@ cout << "8. Go back. " << endl << endl;
 
        if(options == '1')
          {
-            pat.AddPatient();
-            //pat.printPatient();
+            pat.AddPatient(PatAddFile);
+            pat.printPatient();
             break;
          }
          else if(options == '2')
