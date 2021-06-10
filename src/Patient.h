@@ -7,14 +7,14 @@
 class Patient
 {
     //private data
-        int Pat_idNum[12];
-        int doctor_id[12];
-        int record_id[12];
-        std::string Pat_name[12];
-        std::string Pat_phoneNum[12];
-        std::string Pat_gender[12];
-        std::string Pat_email[12];
-        std::string Pat_bloodType[12];
+        int Pat_idNum[120];
+        int doctor_id[120];
+        int record_id[120];
+        std::string Pat_name[120];
+        std::string Pat_phoneNum[120];
+        std::string Pat_gender[120];
+        std::string Pat_email[120];
+        std::string Pat_bloodType[120];
 
     public:
         Patient();                       //default constructor
@@ -25,7 +25,7 @@ class Patient
         void findPatient();
         void findPatByDoc();
         void updatePatInfo();
-        void AddPatient();
+        void AddPatient(std::ofstream &OutputFile);
         void showByTimeRange();
         void removePatient();
 
