@@ -49,7 +49,12 @@ void Patient::loadPatient(ifstream &InputFile)
 
    InputFile >> numOfPatients;
 
-    for (int i = 0; i < numOfPatients; i++){
+    int i = 0;
+
+    /* for (int i = 0; i < numOfPatients; i++) */
+    while(!InputFile.eof())
+    {
+
          InputFile >> p_id;
           SetPat_idNum(p_id,i);
 
@@ -73,6 +78,8 @@ void Patient::loadPatient(ifstream &InputFile)
 
 		 InputFile >> blood;
           SetPat_bloodType(blood,i);
+
+          i++;
         }
 }
 
