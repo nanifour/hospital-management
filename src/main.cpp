@@ -42,21 +42,30 @@ Patient pat;
 Record rec;
 Lab la;
 
-//Open input files
+//****Open input files && output files
+ifstream ApptFile;
+ofstream ApptAddFile;
 ifstream PatFile;
 ofstream PatAddFile;
 ifstream DocFile;
 ifstream SlotFile;
 ifstream DateTimeFile;
 ifstream DiagFile;
+
+ApptFile.open("./text-files/Appointments.txt", ios::in);
+ApptAddFile.open("./text-files/Appointments.txt", ios::app);  //append to end of file
+
 PatFile.open("./text-files/Patients.txt", ios::in);
-PatAddFile.open("./text-files/Patients.txt", ios::app);  //append to end of file
+PatAddFile.open("./text-files/Patients.txt", ios::app);
+
 DocFile.open("./text-files/Doctors.txt", ios::in);
 SlotFile.open("./text-files/Slots.txt", ios::in);
 DateTimeFile.open("./text-files/Date_Time.txt", ios::in);
 DiagFile.open("./text-files/Diagnosis.txt", ios::in);
 
-//Start menu options
+
+
+//***Start menu options
 while(true) {
 cout << endl <<"MAIN MENU:  " << endl;
 cout <<"==========================" << endl;
@@ -88,9 +97,11 @@ cout << "5. Back to Main Menu. " << endl << endl;
       cin >> options;
       while(options != '\n'){
 
+          app.loadAppointments(ApptFile);
+
          if(options == '1')
          {
-           app.addAppt();
+           app.addAppt(ApptAddFile);
            app.printAppt();
            break;
          }
@@ -101,7 +112,7 @@ cout << "5. Back to Main Menu. " << endl << endl;
          }
          else if(options == '3')
          {
-             app.modifyAppt();
+             app.modifyAppt(ApptFile);
            break;
          }
          else if(options == '4')
@@ -134,6 +145,8 @@ cout << "9. Back to Main Menu. " << endl << endl;
        cin >> options;
        while(options != '\n'){
 
+           sl.loadSlots(SlotFile);
+
           if(options == '1')
          {
            sl.showAvailable();
@@ -156,7 +169,6 @@ cout << "9. Back to Main Menu. " << endl << endl;
          }
          else if(options == '5')
          {
-            sl.loadSlots(SlotFile);
             sl.printSlots();
             break;
          }
@@ -196,9 +208,10 @@ cout << "5. Go back. " << endl << endl;
        cin >> options;
        while(options != '\n'){
 
+           d.loadDoctor(DocFile);
+
          if(options == '1')
          {
-           d.loadDoctor(DocFile);
            d.printDoctor();
            break;
          }
@@ -243,6 +256,8 @@ cout << "8. Go back. " << endl << endl;
        cin >> options;
        while(options != '\n'){
 
+           pat.loadPatient(PatFile);
+
        if(options == '1')
          {
             pat.AddPatient(PatAddFile);
@@ -263,7 +278,6 @@ cout << "8. Go back. " << endl << endl;
          }
          else if(options == '4')
          {
-           pat.loadPatient(PatFile);
            pat.printPatient();
            break;
          }
@@ -275,7 +289,6 @@ cout << "8. Go back. " << endl << endl;
          else if(options == '6')
          {
            d.loadDoctor(DocFile);
-           pat.loadPatient(PatFile);
            pat.findPatByDoc();
            break;
          }
@@ -375,6 +388,7 @@ cout << endl << "You chose option 7 to QUIT program. Goodbye!" << endl;
 }
 }
 
+//close files
 PatFile.close();
 DocFile.close();
 SlotFile.close();
