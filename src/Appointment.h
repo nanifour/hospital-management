@@ -19,10 +19,11 @@ class Appointment
         Appointment();                         //default constructor
         ~Appointment();                         //deconstructor
         Appointment(const Appointment& other);  //copy constructor
-        void addAppt();
+        void addAppt(std::ofstream &OutputFile);
         void printAppt();
-        void modifyAppt();
+        void modifyAppt(std::ifstream &InputFile);
         void removeAppt();
+        void loadAppointments(std::ifstream &InputFile);  //save to file
 
      //Getters and Setters
         int GetAppoint_id(int index) { return Appoint_id[index]; }
