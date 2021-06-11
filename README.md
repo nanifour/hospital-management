@@ -1,6 +1,6 @@
 # :hospital: Hospital Management System :health_worker:
 
-Made using C++
+Made with ![](https://img.shields.io/badge/C%2B%2B-00599C?&logo=c%2B%2B&logoColor=white)
 
 A **Hospital Management System** that allows you to manage appointments, slots, doctors, patients, patient records, and reads from text files to allow for changes. This is a command line program.
 
