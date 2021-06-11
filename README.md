@@ -2,7 +2,9 @@
 
 Made using C++
 
-A hospital management system that allows you to manage appointments, slots, doctors, patients, patient records, and read from text files to allow for mass changes. This is a commnd line program.
+A **Hospital Management System** that allows you to manage appointments, slots, doctors, patients, patient records, and reads from text files to allow for changes. This is a command line program.
+
+This project uses *OOP*, *Classes*, *Encapsulation*, *Data Abstraction*, and Input and Output files. 
 
 In order to compile and run this project, you need to download the directory (zip folder) and then you can use the makefile to run the program. Running ‘make’ while in the directory, will create an executable file (you may need to chmod +x the file to change the permission in order to execute it).
 
@@ -11,9 +13,10 @@ In order to compile and run this project, you need to download the directory (zi
 ```zsh
 $ make
 ```
-or 
+### Run the executable by: (* g++ must be already installed *)
+:
 ```zsh
-$ make clean
+$ ./main
 ```
 #### Sample output:
 
