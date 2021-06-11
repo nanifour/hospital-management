@@ -13,7 +13,7 @@ In order to compile and run this project, you need to download the directory (zi
 ```zsh
 $ make
 ```
-### Run the executable by: (* g++ must be already installed *)
+### Run the executable by: (* gcc must be already installed *)
 :
 ```zsh
 $ ./main
