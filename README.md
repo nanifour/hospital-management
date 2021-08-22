@@ -2,13 +2,15 @@
 
 Made with ![](https://img.shields.io/badge/C%2B%2B-00599C?&logo=c%2B%2B&logoColor=white)
 
-A **Hospital Management System** that allows you to manage appointments, slots, doctors, patients, patient records, and reads from text files to allow for changes. This is a command line program.
+This is a **Hospital Management System** that allows you to manage appointments, slots, doctors, patients, and patient records. The program also reads from text files to allow for changes in appointments. **This is a command line program**.
 
 This project uses *OOP*, *Classes*, *Encapsulation*, *Data Abstraction*, and Input and Output files. 
 
+## 2 Compile 
+
 In order to compile and run this project, you need to download the directory (zip folder) and then you can use the makefile to run the program. Running ‘make’ while in the directory, will create an executable file (you may need to chmod +x the file to change the permission in order to execute it).
 
----
+
 ### Running Make to get an executable:
 ```zsh
 $ make
@@ -18,7 +20,7 @@ $ make
 ```zsh
 $ ./main
 ```
-#### Sample output:
+## 3 Screenshot:
 
 ![screenshot](images/screenshot.png)
 
